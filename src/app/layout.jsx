@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
-
+import Slider from '../components/Slider/Slider'
+import Footer from "@/components/Footer/Footer";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -20,9 +21,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+          <body className={`${geistSans.variable} ${geistMono.variable}`}>
+              <Slider/>
+              <main>{children}</main>
+              <Footer></Footer>
+          </body>
     </html>
   );
 }

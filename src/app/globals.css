@@ -1,42 +1,116 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/** @format */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
+html {
   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  /* outline: 2px solid black; */
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+}
+
+body > * {
+  flex: 1 0 auto;
+}
+
+/* Fonts */
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+/* Root */
+
+:root {
+  /* Colors */
+  --color-primary: #4845d2;
+  --color-secondary: #ff5a5f;
+  --color-text: #333;
+  --color-text-light: #f4f4f4;
+  /* Fonts */
+  --font-primary: "Lato", sans-serif;
+  --font-secondary: "Roboto", sans-serif;
+  /* Spaces */
+  --space-xxs: 5px;
+  --space-xs: 10px;
+  --space-sm: 15px;
+  --space-md: 20px;
+  --space-lg: 30px;
+  --space-xl: 40px;
+  /* Box Shadows */
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Border-radius */
+  --border-radius-sm: 8px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 12px;
+}
+
+/* Globals */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+h1 {
+  font-size: 3.6rem;
 }
+
+h2 {
+  font-size: 2.4rem;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout */
+
+.container {
+  /* width: 90%; */
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+/* Utilities */
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+/* Write your CSS code here */

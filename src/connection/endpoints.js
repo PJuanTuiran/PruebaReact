@@ -1,0 +1,1 @@
+export const URL_BD_POST = "https://gimcloud.com.co/salespoint/api/"
